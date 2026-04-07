@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BPA Shipping Logistics Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f4f4f9; }
+        .order-container { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .order-card { border-bottom: 1px solid #eee; padding: 15px 0; }
+        .order-id { font-weight: bold; font-size: 1.1em; color: #333; }
+        .tracking-status { display: block; margin-top: 5px; color: #666; }
+        .tracking-num { font-family: monospace; font-weight: bold; color: #007bff; }
+        .warning { color: #d9534f; font-weight: bold; } /* Used for missing numbers */
+    </style>
+</head>
+<body>
+    <div class="order-container">
+        <h1>Internal Warehouse Audit: Shipped Orders</h1>
+        <p>Review the list below for missing carrier data.</p>
+
+        <div class="order-card">
+            <span class="order-id">Order #88210</span>
+            <span class="tracking-status">Tracking: <span class="tracking-num">1Z999AA10123456784</span></span>
+        </div>
+
+        <div class="order-card">
+            <span class="order-id">Order #88211</span>
+            <span class="tracking-status">Tracking: <span class="tracking-num warning">MISSING_DATA</span></span>
+        </div>
+
+        <div class="order-card">
+            <span class="order-id">Order #88212</span>
+            <span class="tracking-status">Tracking: <span class="tracking-num">9400100000000000000000</span></span>
+        </div>
+
+        <div class="order-card">
+            <span class="order-id">Order #88213</span>
+            <span class="tracking-status">Tracking: <span class="tracking-num warning">MISSING_DATA</span></span>
+        </div>
+    </div>
+</body>
+</html>
